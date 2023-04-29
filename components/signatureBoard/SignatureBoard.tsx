@@ -1,5 +1,5 @@
 // React
-import React, { FC, useEffect, useRef, useState } from "react";
+import React, { FC, useRef, useState } from "react";
 
 // React Native
 import { View, Modal, StyleSheet, Image, Button } from "react-native";
@@ -88,7 +88,6 @@ const SignatureBoard: FC<SignatureBoardProps> = (SignatureBoardProps) => {
   };
 
   const changeBgImage = (image: string | null | undefined) => {
-    console.log("changeBgImage: ", image);
     setState({
       ...state,
       isCameraOpen: false,
@@ -127,7 +126,6 @@ const SignatureBoard: FC<SignatureBoardProps> = (SignatureBoardProps) => {
                   source={{ uri: state.bgImage }}
                 />
               )}
-
               {state.signature !== "" && (
                 <Image
                   style={{
@@ -168,12 +166,6 @@ const SignatureBoard: FC<SignatureBoardProps> = (SignatureBoardProps) => {
                 changeColor={changeColor}
               />
             </Modal>
-
-            {/* <Modal
-              onRequestClose={hidePenSizePicker}
-              visible={state.showChangePenSize}
-              animationType="slide"
-            > */}
           </View>
           {state.showChangePenSize && (
             <PenSizePicker
