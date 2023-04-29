@@ -41,11 +41,17 @@ const CameraScreen: FunctionComponent<CameraProps> = (props) => {
   if (!permission.granted) {
     // Camera permissions are not granted yet
     return (
-      <View style={{ flex: 1 }}>
-        <Text style={{ textAlign: "center" }}>
+      <View style={CameraStyles.permissionsContainer}>
+        <Image source={lens} style={CameraStyles.cameraIcon} />
+        <Text style={CameraStyles.permissionsText}>
           We need your permission to show the camera
         </Text>
-        <Button onPress={requestPermission} title="grant permission" />
+        <TouchableOpacity
+          style={CameraStyles.permissionsButton}
+          onPress={requestPermission}
+        >
+          <Text style={CameraStyles.permissionsBtnText}>Grant permission</Text>
+        </TouchableOpacity>
       </View>
     );
   }
@@ -58,6 +64,7 @@ const CameraScreen: FunctionComponent<CameraProps> = (props) => {
   return (
     <View style={CameraStyles.cameraScreenContainer}>
       <Camera
+        ratio="16:9"
         style={CameraStyles.camera}
         type={state.cameraType}
         ref={cameraRef}
