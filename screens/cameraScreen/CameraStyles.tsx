@@ -25,6 +25,29 @@ const CameraStyles = StyleSheet.create({
     borderRadius: 50,
     borderWidth: 2,
   },
+  permissionsContainer: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    gap: 20,
+  },
+  permissionsButton: {
+    height: 50,
+    paddingHorizontal: 20,
+    borderRadius: 10,
+    backgroundColor: "#272c34",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  permissionsText: {
+    fontSize: 20,
+    textAlign: "center",
+  },
+  permissionsBtnText: {
+    color: "white",
+    fontWeight: "bold",
+    fontSize: 20,
+  },
 });
 
 export default CameraStyles;
