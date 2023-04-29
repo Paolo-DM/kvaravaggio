@@ -12,10 +12,6 @@ import DrawingBoardScreenStyles from "./DrawingBoardScreenStyles";
 
 type DrawingBoardProps = {};
 
-// function DrawingBoardScreen({}: Props) {
-//   return <div>DrawingBoardScreen</div>;
-// }
-
 const DrawingBoardScreen: FunctionComponent<DrawingBoardProps> = () => {
   return (
     <View style={DrawingBoardScreenStyles.drawingBoardScreenContainer}>
