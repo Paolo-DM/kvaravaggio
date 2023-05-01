@@ -61,6 +61,16 @@ const CameraScreen: FunctionComponent<CameraProps> = (props) => {
     props.changeBgImage(image);
   };
 
+  const flipCamera = () => {
+    setState({
+      ...state,
+      cameraType:
+        state.cameraType === CameraType.back
+          ? CameraType.front
+          : CameraType.back,
+    });
+  };
+
   return (
     <View style={CameraStyles.cameraScreenContainer}>
       <Camera
@@ -73,7 +83,7 @@ const CameraScreen: FunctionComponent<CameraProps> = (props) => {
           <TouchableOpacity onPress={onPhotoShooting}>
             <Image source={lens} style={CameraStyles.cameraIcon} />
           </TouchableOpacity>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={flipCamera}>
             <Image source={rotate} style={CameraStyles.cameraIcon} />
           </TouchableOpacity>
         </View>
