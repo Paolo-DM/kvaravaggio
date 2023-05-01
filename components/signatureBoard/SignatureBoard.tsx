@@ -20,9 +20,7 @@ import SignatureBoardStyles from "./SignatureBoardStyles";
 import { webStyle } from "./SignatureBoardStyles";
 import ToolsBar from "../functionalComponents/toolsBar/ToolsBar";
 
-interface SignatureBoardProps {
-  // onOK: (signature) => void;
-}
+interface SignatureBoardProps {}
 
 interface State {
   showColorPicker: boolean;
@@ -40,7 +38,7 @@ const initialState: State = {
   signature: "",
 };
 
-const SignatureBoard: FC<SignatureBoardProps> = (SignatureBoardProps) => {
+const SignatureBoard: FC<SignatureBoardProps> = () => {
   // refs
   const boardRef = useRef<SignatureViewRef>(null);
   const screenshotRef = useRef<ViewShot>(null);
@@ -91,6 +89,7 @@ const SignatureBoard: FC<SignatureBoardProps> = (SignatureBoardProps) => {
     setState({
       ...state,
       isCameraOpen: false,
+      signature: "",
       bgImage: "data:image/png;base64," + image,
     });
   };
