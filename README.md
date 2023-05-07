@@ -10,12 +10,12 @@ Several third-party libraries were used to provide additional functionality to t
 
 # App screenshots 📷
 
-<img src="assets/screenshots/tutorial1.jpg" width="200"/>
-<img src="assets/screenshots/tutorial2.jpg" width="200"/>
-<img src="assets/screenshots/tutorial3.jpg" width="200"/>
-<img src="assets/screenshots/tutorial4.jpg" width="200"/>
+<img src="assets/images/screenshots/tutorial1.jpg" width="200"/>
+<img src="assets/images/screenshots/tutorial2.jpg" width="200"/>
+<img src="assets/images/screenshots/tutorial3.jpg" width="200"/>
+<img src="assets/images/screenshots/tutorial4.jpg" width="200"/>
 
-<img src="assets/screenshots/drawing.jpg" width="200"/>
-<img src="assets/screenshots/color-picker.jpg" width="200"/>
-<img src="assets/screenshots/gallery.jpg" width="200"/>
-<img src="assets/screenshots/img-opened.jpg" width="200"/>
+<img src="assets/images/screenshots/drawing.jpg" width="200"/>
+<img src="assets/images/screenshots/color-picker.jpg" width="200"/>
+<img src="assets/images/screenshots/gallery.jpg" width="200"/>
+<img src="assets/images/screenshots/img-opened.jpg" width="200"/>
