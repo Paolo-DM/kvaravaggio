@@ -34,6 +34,7 @@ const initialState: State = {
   appIsReady: false,
 };
 
+// Makes the splash screen remain visible until hideAsync is called
 SplashScreen.preventAutoHideAsync();
 
 const App = () => {
@@ -73,10 +74,7 @@ const App = () => {
 
   const onLayoutRootView = useCallback(async () => {
     if (state.appIsReady) {
-      // This tells the splash screen to hide immediately! If we call this after
-      // `setAppIsReady`, then we may see a blank screen while the app is
-      // loading its initial state and rendering its first pixels. So instead,
-      // we hide the splash screen once we know the root view has already
+      // We hide the splash screen once we know the root view has already
       // performed layout.
       await SplashScreen.hideAsync();
     }
